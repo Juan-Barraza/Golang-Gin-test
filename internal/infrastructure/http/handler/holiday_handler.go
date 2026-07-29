@@ -18,6 +18,18 @@ func NewHolidayHandler(uc ports.IGetAllHolidayUseCase) *HolidayHandler {
 	return &HolidayHandler{getAllUseCase: uc}
 }
 
+// GetHolidays godoc
+// @Summary      Obtener feriados
+// @Description  Obtiene la lista de feriados filtrados por tipo (Civil, Religioso) y/o rango de fechas (startDate, endDate). Soporta respuestas en JSON y XML.
+// @Tags         holidays
+// @Accept       json,xml
+// @Produce      json,xml
+// @Param        type       query     string  false  "Tipo de feriado (Civil, Religioso)"
+// @Param        startDate  query     string  false  "Fecha inicial (Formato YYYY-MM-DD)"
+// @Param        endDate    query     string  false  "Fecha final (Formato YYYY-MM-DD)"
+// @Success      200        {object}  dtos.HolidaysResponse
+// @Failure      400        {object}  map[string]string
+// @Router       /holidays [get]
 func (h *HolidayHandler) GetHolidays(c *gin.Context) {
 	filters := &entities.HolidayFilter{
 		Type:      c.Query("type"),

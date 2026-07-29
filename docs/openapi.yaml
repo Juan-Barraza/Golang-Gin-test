@@ -1,0 +1,94 @@
+openapi: 3.0.3
+info:
+  title: Holiday API Service
+  description: Servicio en Golang (Gin) para consultar y filtrar feriados con arquitectura hexagonal, soporte JSON/XML y persistencia en memoria/archivo.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Servidor Local / Docker
+paths:
+  /holidays:
+    get:
+      summary: Obtener y filtrar feriados
+      description: Retorna la lista de feriados filtrados por tipo o rango de fechas. La respuesta puede entregarse en JSON o XML según la cabecera Accept.
+      operationId: getHolidays
+      parameters:
+        - name: type
+          in: query
+          description: Tipo de feriado a filtrar (Civil, Religioso)
+          required: false
+          schema:
+            type: string
+            example: Civil
+        - name: startDate
+          in: query
+          description: Fecha inicio de filtro (YYYY-MM-DD)
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2026-05-01"
+        - name: endDate
+          in: query
+          description: Fecha fin de filtro (YYYY-MM-DD)
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2026-10-31"
+      responses:
+        '200':
+          description: Lista de feriados obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HolidaysResponse'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HolidaysResponse'
+        '400':
+          description: Parámetro invalido en la consulta
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    HolidayDto:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date
+          example: "2026-01-01"
+        title:
+          type: string
+          example: "Año Nuevo"
+        phone:
+          type: string
+          example: ""
+        type:
+          type: string
+          example: "Civil"
+        inalienable:
+          type: boolean
+          example: true
+        extra:
+          type: string
+          example: "Civil e Irrenunciable"
+    HolidaysResponse:
+      type: object
+      properties:
+        holidays:
+          type: array
+          items:
+            $ref: '#/components/schemas/HolidayDto'
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "invalid type: \"Invalido\""

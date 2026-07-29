@@ -10,6 +10,11 @@ import (
 	"os"
 )
 
+// @title           Holiday API Service
+// @version         1.0
+// @description     Servicio en Golang (Gin) para consultar y filtrar feriados con soporte para JSON y XML.
+// @host            localhost:8080
+// @BasePath        /
 func main() {
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	cfg := config.Load()
