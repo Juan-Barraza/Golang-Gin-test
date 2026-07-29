@@ -1,0 +1,130 @@
+[
+  {
+    "Date": "2026-01-01T00:00:00Z",
+    "Title": "Año Nuevo",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": true,
+    "Extra": "Civil e Irrenunciable"
+  },
+  {
+    "Date": "2026-04-03T00:00:00Z",
+    "Title": "Viernes Santo",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-04-04T00:00:00Z",
+    "Title": "Sábado Santo",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-05-01T00:00:00Z",
+    "Title": "Día Nacional del Trabajo",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": true,
+    "Extra": "Civil e Irrenunciable"
+  },
+  {
+    "Date": "2026-05-21T00:00:00Z",
+    "Title": "Día de las Glorias Navales",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-06-21T00:00:00Z",
+    "Title": "Día Nacional de los Pueblos Indígenas",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-06-29T00:00:00Z",
+    "Title": "San Pedro y San Pablo",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-07-16T00:00:00Z",
+    "Title": "Día de la Virgen del Carmen",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-08-15T00:00:00Z",
+    "Title": "Asunción de la Virgen",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-09-18T00:00:00Z",
+    "Title": "Independencia Nacional",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": true,
+    "Extra": "Civil e Irrenunciable"
+  },
+  {
+    "Date": "2026-09-19T00:00:00Z",
+    "Title": "Día de las Glorias del Ejército",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": true,
+    "Extra": "Civil e Irrenunciable"
+  },
+  {
+    "Date": "2026-10-12T00:00:00Z",
+    "Title": "Encuentro de Dos Mundos",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-10-31T00:00:00Z",
+    "Title": "Día de las Iglesias Evangélicas y Protestantes",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-11-01T00:00:00Z",
+    "Title": "Día de Todos los Santos",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-12-08T00:00:00Z",
+    "Title": "Inmaculada Concepción",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": false,
+    "Extra": "Civil"
+  },
+  {
+    "Date": "2026-12-25T00:00:00Z",
+    "Title": "Navidad",
+    "Phone": "",
+    "Type": "Civil",
+    "Inalienable": true,
+    "Extra": "Civil e Irrenunciable"
+  }
+]
