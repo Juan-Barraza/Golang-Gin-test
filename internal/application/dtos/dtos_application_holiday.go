@@ -17,13 +17,18 @@ type HolidayDto struct {
 }
 
 type ResponseHolidateDto struct {
-	Date        string
-	Title       string
-	Phone       string
-	Type        string
-	Inalienable bool
-	Extra       string
+	Date        string `json:"date" xml:"date"`
+	Title       string `json:"title" xml:"title"`
+	Phone       string `json:"phone" xml:"phone"`
+	Type        string `json:"type" xml:"type"`
+	Inalienable bool   `json:"inalienable" xml:"inalienable"`
+	Extra       string `json:"extra" xml:"extra"`
 }
+
+type HolidaysResponse struct {
+	Holidays []ResponseHolidateDto `json:"holidays" xml:"holiday"`
+}
+
 
 func NewHolidayDto(holiday HolidayDto) (*entities.Holiday, error) {
 	date, err := time.Parse("2006-01-02", holiday.Date)
