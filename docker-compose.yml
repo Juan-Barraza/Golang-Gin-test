@@ -1,0 +1,15 @@
+services:
+  golang-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: golang-test
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      - PORT=${PORT}
+      - DATA_FILE_PATH=${DATA_FILE_PATH}
+      - BOOSTR_API_URL=${BOOSTR_API_URL}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
